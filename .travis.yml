@@ -17,4 +17,4 @@ cache:
 install:
   - npm install
 script:
-  - npm test
+  - cd client/ && npm run test
