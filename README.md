@@ -27,7 +27,7 @@ Latest stable version will always be master, so clone the repo and pull that bra
 # To run:
 1.) Clone the repository to your local machine
 
-2.) In terminal, cd MedicalSocialNetwork/
+2.) In terminal, cd MedicalSocialNetworkRework/
 
 3.) run npm install
 
