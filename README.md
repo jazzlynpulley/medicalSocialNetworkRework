@@ -8,7 +8,7 @@ This project was created to benefit working medical professionals and their pati
 
 ### How to obtain and Run Software
 
-There is no physical software necessary to run our system, users simply need to navigate to the url at [http://medicalsocial.000webhostapp.com/](http://medicalsocial.000webhostapp.com/)
+There is no physical software necessary to run our system, users simply need to navigate to the url at [https://medicalsocialnetwork.herokuapp.com/](https://medicalsocialnetwork.herokuapp.com/)
 
 ### How to use the software
 
@@ -33,7 +33,7 @@ Latest stable version will always be master, so clone the repo and pull that bra
 
 4.) run npm run dev
 
-5.) point your browser to [http://localhost:5000](http://localhost:3000)
+5.) point your browser to [http://localhost:3000](http://localhost:3000)
 
 # Directory Structure
 ![MedicalSocialNetwork](dir.png)
