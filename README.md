@@ -14,9 +14,13 @@ There is no physical software necessary to run our system, users simply need to 
 
 The use of the software is similar to that of any other social media website, except that because of the nature of the data on this social media platform, further steps must be taken to ensure the proper indentity of both patient and doctor. For doctors, `#####` will be needed upon the account creating process to confirm credentials and identity, wheras on the patient side `#####` will be needed. While at this stage of the production process the tools are not yet created for these processes and adding of connections between patients and doctors, these descriptions will be added futher into the production cycle.
 
+Click on the MedicalSocialNetwork to navigate to the register and log in page. To register, click the register button. The email must be a valid email and the password needs to be 6 characters. To log in, click in the log in button. Enter your email and password used from registration. 
+
 ### Reporting a Bug
 
 To report a bug, simply navigate to the "report a problem" link towards the bottom of any page, which will take you to a report form for you to fill out. Please remember to include a good desciptive title at the top of the report, as well as strong descriptions of where on the site you encountered the problem and what exactly the problem entailed within the report itself. If the bug persist or prevents you from doing anything within the site (eg. more than a cosmetic bug) select the appropriate boxes beneath the report before hitting submit.
+
+[Click here to report/access bugs](https://github.com/jazzlynpulley/medicalSocialNetworkRework/issues)
 
 
 ## Documentation for Developers
@@ -33,7 +37,7 @@ Latest stable version will always be master, so clone the repo and pull that bra
 
 4.) run npm run dev
 
-5.) point your browser to [http://localhost:5000](http://localhost:5000)
+5.) point your browser to [http://localhost:3000](http://localhost:3000)
 
 # Directory Structure
 medicalSocialNetwork
