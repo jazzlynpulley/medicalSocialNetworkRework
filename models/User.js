@@ -28,8 +28,8 @@ const UserSchema = new Schema({
     default: "Patient"
   },
  friendslist: {
-    type: [String],
-    default: ["Test"]
+    type: Array,
+    default: ("Test")
   }
 });
 

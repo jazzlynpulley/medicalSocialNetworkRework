@@ -2,17 +2,20 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import { addFriend } from "../../actions/authActions";
+//import { addFriend } from  "../../actions/authActions";
 
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
   };
+  
   onFriendClick = e => {
-   e.preventDefaul();
-   this.props.addFriend();
-
+   e.preventDefault();
+   //this.addFriend();
+  var person = prompt("Please enter your new friends name:", " ENTER HERE");
+  const { user } = this.props.auth;
+  user.friendslist+= person;
   };
   
 render() {
@@ -30,7 +33,7 @@ return (
 		<p>
 		 Friends list 
 		</p>
-		{user.password}
+      		{user.friendslist}
 		
             </h4>
             <button
@@ -54,7 +57,7 @@ return (
                 letterSpacing: "1.5px",
                 marginTop: "1rem"
               }}
-              onClick={this.addFriend}
+              onClick={this.onFriendClick}
               className="btn btn-large waves-effect waves-light hoverable blue accent-3"
             >
               Friend 

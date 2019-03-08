@@ -70,6 +70,7 @@ export const logoutUser = () => dispatch => {
 };
 
 //add friend
-export const addFriend = () =>{
+export const addFriend = () => { 
 
 };
+
