@@ -2,11 +2,17 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import { addFriend } from "../../actions/authActions";
 
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
+  };
+  onFriendClick = e => {
+   e.preventDefaul();
+   this.props.addFriend();
+
   };
   
 render() {
@@ -20,7 +26,12 @@ return (
               <p className="flow-text grey-text text-darken-1">
                 You are logged into a full-stack{" "}
                 <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
-              </p>
+                </p>
+		<p>
+		 Friends list 
+		</p>
+		{user.password}
+		
             </h4>
             <button
               style={{
@@ -34,6 +45,21 @@ return (
             >
               Logout
             </button>
+ 	    
+	    <button
+              style={{
+                marginLeft: "10px",
+		width: "150px",
+                borderRadius: "4px",
+                letterSpacing: "1.5px",
+                marginTop: "1rem"
+              }}
+              onClick={this.addFriend}
+              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+            >
+              Friend 
+            </button>
+
           </div>
         </div>
       </div>

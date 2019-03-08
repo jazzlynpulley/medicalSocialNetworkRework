@@ -26,6 +26,10 @@ const UserSchema = new Schema({
     type: String,
     required: true,
     default: "Patient"
+  },
+ friendslist: {
+    type: [String],
+    default: ["Test"]
   }
 });
 
