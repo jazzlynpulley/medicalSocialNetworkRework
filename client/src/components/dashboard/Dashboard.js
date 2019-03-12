@@ -14,8 +14,8 @@ class Dashboard extends Component {
    e.preventDefault();
    //this.addFriend();
   var person = prompt("Please enter your new friends name:", " ENTER HERE");
-  const { user } = this.props.auth;
-  user.friendslist+= person;
+ const { user } = this.props.auth;
+  user.friends.push(person);
   };
   
 render() {
@@ -33,7 +33,7 @@ return (
 		<p>
 		 Friends list 
 		</p>
-      		{user.friendslist}
+   		{user.friends}
 		
             </h4>
             <button
