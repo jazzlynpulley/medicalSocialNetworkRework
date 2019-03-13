@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import axios from 'axios';
 //import { addFriend } from  "../../actions/authActions";
 
 class Dashboard extends Component {
+
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
@@ -12,10 +14,17 @@ class Dashboard extends Component {
   
   onFriendClick = e => {
    e.preventDefault();
-   //this.addFriend();
   var person = prompt("Please enter your new friends name:", " ENTER HERE");
- const { user } = this.props.auth;
-  user.friends.push(person);
+  const { user } = this.props.auth;
+   
+  const obj = {
+            friends: user.friends.push(", " + person) 
+        };
+        console.log(obj);
+        axios.post('http://localhost:3000/'+this.props.match.params.id, obj)
+            .then(res => console.log(res.data));
+        this.props.history.push('/dashboard'); 
+       
   };
   
 render() {
