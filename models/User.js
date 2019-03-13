@@ -29,7 +29,7 @@ const UserSchema = new Schema({
   },
  friendslist: {
     type: Array,
-    default: ("Test")
+    default: ["Bill Anderson, ", "Jamie Simpson"]
   }
 });
 
