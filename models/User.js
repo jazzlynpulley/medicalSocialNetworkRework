@@ -26,6 +26,10 @@ const UserSchema = new Schema({
     type: String,
     required: true,
     default: "Patient"
+  },
+ friendslist: {
+    type: Array,
+    default: ["Bill Anderson, ", "Jamie Simpson"]
   }
 });
 
