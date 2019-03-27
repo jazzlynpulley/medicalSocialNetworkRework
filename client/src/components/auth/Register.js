@@ -147,7 +147,7 @@ return (
                       invalid: errors.accountType
                     })}
                   />
-                  <label htmlFor="accontType">Account Type</label>
+                  <label htmlFor="accountType">Account Type</label>
                   <span className="red-text">{errors.accountType}</span>
                   </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
