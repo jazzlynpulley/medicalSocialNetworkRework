@@ -38,6 +38,10 @@ return (
               <p className="flow-text grey-text text-darken-1">
                 You are logged into a full-stack{" "}
                 <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
+               </p>
+                
+                <p>
+		Account level is  {user.type}
                 </p>
 		<p>
 		 Friends list 

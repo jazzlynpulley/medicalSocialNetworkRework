@@ -69,6 +69,7 @@ const email = req.body.email;
           id: user.id,
           name: user.name,
           email: user.email,
+	  type: user.accountType,
 	  friends: user.friendslist
 	};
 // Sign token
