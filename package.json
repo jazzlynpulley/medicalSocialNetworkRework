@@ -19,9 +19,9 @@
   "main": "./dist/server.generated.js",
   "scripts": {
     "development": "nodemon",
-    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+    "dontbuild": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
     "start": "NODE_ENV=production node ./dist/server.generated.js",
-    "heroku-postbuild": "echo build skipped"
+    "heroku-prebuild": "echo build skipped"
   },
   "engines": {
     "node": "8.11.1",
