@@ -130,18 +130,11 @@ class Profile extends Component {
         </Typography>
         <List dense>
           <ListItem>
-            <ListItemAvatar>
-              <Avatar src={photoUrl} className={classes.bigAvatar}/>
-            </ListItemAvatar>
+            
             <ListItemText primary={this.state.user.name} secondary={this.state.user.email}/> {
              auth.isAuthenticated().user && auth.isAuthenticated().user._id == this.state.user._id
              ? (<ListItemSecondaryAction>
-                  <Link to={"/user/edit/" + this.state.user._id}>
-                    <IconButton aria-label="Edit" color="primary">
-                      <Edit/>
-                    </IconButton>
-                  </Link>
-                  <DeleteUser userId={this.state.user._id}/>
+
                 </ListItemSecondaryAction>)
             : (<FollowProfileButton following={this.state.following} onButtonClick={this.clickFollowButton}/>)
             }

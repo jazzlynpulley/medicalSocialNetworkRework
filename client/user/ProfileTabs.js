@@ -33,7 +33,7 @@ class ProfileTabs extends Component {
             textColor="primary"
             fullWidth
           >
-            <Tab label="Posts" />
+            <Tab label="Messages" />
             <Tab label="Following" />
             <Tab label="Followers" />
           </Tabs>

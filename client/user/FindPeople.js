@@ -85,9 +85,7 @@ class FindPeople extends Component {
           {this.state.users.map((item, i) => {
               return <span key={i}>
                 <ListItem>
-                  <ListItemAvatar className={classes.avatar}>
-                      <Avatar src={'/api/users/photo/'+item._id}/>
-                  </ListItemAvatar>
+                  
                   <ListItemText primary={item.name}/>
                   <ListItemSecondaryAction className={classes.follow}>
                     <Link to={"/user/" + item._id}>

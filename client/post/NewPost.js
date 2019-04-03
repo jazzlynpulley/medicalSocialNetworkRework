@@ -91,13 +91,7 @@ class NewPost extends Component {
     const {classes} = this.props
     return (<div className={classes.root}>
       <Card className={classes.card}>
-      <CardHeader
-            avatar={
-              <Avatar src={'/api/users/photo/'+this.state.user._id}/>
-            }
-            title={this.state.user.name}
-            className={classes.cardHeader}
-          />
+      
       <CardContent className={classes.cardContent}>
         <TextField
             placeholder="Leave a message"

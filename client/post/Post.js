@@ -129,18 +129,7 @@ class Post extends Component {
                 />
             </div>)}
         </CardContent>
-        <CardActions>
-          { this.state.like
-            ? <IconButton onClick={this.like} className={classes.button} aria-label="Like" color="secondary">
-                <FavoriteIcon />
-              </IconButton>
-            : <IconButton onClick={this.like} className={classes.button} aria-label="Unlike" color="secondary">
-                <FavoriteBorderIcon />
-              </IconButton> } <span>{this.state.likes}</span>
-              <IconButton className={classes.button} aria-label="Comment" color="secondary">
-                <CommentIcon/>
-              </IconButton> <span>{this.state.comments.length}</span>
-        </CardActions>
+        
         <Divider/>
         <Comments postId={this.props.post._id} comments={this.state.comments} updateComments={this.updateComments}/>
       </Card>
