@@ -11,6 +11,7 @@ import {create} from './api-post.js'
 import auth from './../auth/auth-helper'
 import IconButton from 'material-ui/IconButton'
 import PhotoCamera from 'material-ui-icons/PhotoCamera'
+import FileUpload from './FileUpload'
 
 const styles = theme => ({
   root: {
@@ -91,7 +92,7 @@ class NewPost extends Component {
     const {classes} = this.props
     return (<div className={classes.root}>
       <Card className={classes.card}>
-      
+
       <CardContent className={classes.cardContent}>
         <TextField
             placeholder="Leave a message"
@@ -110,6 +111,7 @@ class NewPost extends Component {
             </Typography>)
         }
       </CardContent>
+      <FileUpload />
       <CardActions>
         <Button color="primary" variant="raised" disabled={this.state.text === ''} onClick={this.clickPost} className={classes.submit}>SUBMIT</Button>
       </CardActions>

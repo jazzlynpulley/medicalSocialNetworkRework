@@ -20,6 +20,7 @@ import { SheetsRegistry } from 'react-jss/lib/jss'
 import JssProvider from 'react-jss/lib/JssProvider'
 import { MuiThemeProvider, createMuiTheme, createGenerateClassName } from 'material-ui/styles'
 import {teal, orange} from 'material-ui/colors'
+import fileUpload from 'express-fileupload';
 //end
 
 //comment out before building for production
@@ -36,6 +37,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser())
 app.use(compress())
+app.use(fileUpload())
 // secure apps by setting various HTTP headers
 app.use(helmet())
 // enable CORS - Cross Origin Resource Sharing
@@ -88,6 +90,20 @@ app.get('*', (req, res) => {
       markup: markup,
       css: css
     }))
+})
+
+app.post('/upload', (req, res, next) => {
+  console.log(req);
+  let imageFile = req.files.file;
+
+  imageFile.mv(`${__dirname}/public/${req.body.filename}.jpg`, function(err) {
+    if (err) {
+      return res.status(500).send(err);
+    }
+
+    res.json({file: `public/${req.body.filename}.jpg`});
+  });
+
 })
 
 // Catch unauthorised errors
