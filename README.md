@@ -35,7 +35,7 @@ Latest stable version will always be master, so clone the repo and pull that bra
 
 3.) run npm install
 
-4.) run npm run dev
+4.) run npm run development
 
 5.) point your browser to [http://localhost:3000](http://localhost:3000)
 
@@ -78,6 +78,7 @@ Medical Social network The goal of this project is to create a social networkwhe
 6.Ability for clinicians to share information with the patients.
 
 7.Use a secured data host and a 3rd party electronic health care integrator(Google Cloud platform healthcare API may be able to theoretically solve both problems
+    Our data host is secured but we were unable to find a way to integrate  3rd party electronic health care as we did not seem to have the proper credentials. 
 
 # Open Source Used:
 Full-Stack React Projects by Shama Hoque
