@@ -32,7 +32,7 @@ class Home extends Component {
         {this.state.defaultPage &&
           <Grid container spacing={24}>
             <Grid item xs={12}>
-
+            <a href="https://github.com/jazzlynpulley/medicalSocialNetworkRework">Checkout our github!</a> 
             </Grid>
           </Grid>
         }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'babel-polyfill';
+import Popup from 'reactjs-popup'
 
 class FileUpload extends Component {
   constructor () {
@@ -33,7 +34,10 @@ class FileUpload extends Component {
     return (
       <form onSubmit={this.submitFile}>
         <input label='upload file' type='file' onChange={this.handleFileUpload} />
-        <button type='submit'>Send</button>
+        <Popup trigger={<button type='submit'>Send</button>} position="right center">
+          <div>File uploaded!</div>
+        </Popup>
+
       </form>
     );
   }
