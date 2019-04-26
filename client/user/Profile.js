@@ -17,6 +17,7 @@ import FollowProfileButton from './../user/FollowProfileButton'
 import ProfileTabs from './../user/ProfileTabs'
 import {listByUser} from './../post/api-post.js'
 import NewPost from './../post/NewPost'
+import FileUpload from '../../server/helpers/FileUpload'
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -148,6 +149,7 @@ class Profile extends Component {
           </ListItem>
           <Divider/>
           <NewPost addUpdate={this.addPost}/>
+          <FileUpload />
           <ListItem>
             <ListItemText primary={this.state.user.about} secondary={"Joined: " + (
               new Date(this.state.user.created)).toDateString()}/>
